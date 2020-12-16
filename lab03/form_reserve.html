@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HOTEL BOOKING</title>
+</head>
+<body>
+ <h3>Hotel Booking</h3>
+ <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php">
+    <table cellpadding = "8">
+    <tr>
+        <td><label for="roomtype">Room Type:</label></td>
+        <td><select name="roomtype">
+            <option value="0">Please Select</option>
+            <option value="Standard">Standard</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Duluxe">Duluxe</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="numguest">Number of Guests:</label></td>
+        <td colspan="2">
+            <select id="numguest" name="numguest" size="1*3" style="widows: 300px;">
+            <option value="0">Please Select</option>
+            <option value="1-2">1-2</option>
+            <option value="3-4">3-4</option>
+            <option value="5-6">5-6</option>
+            <option value="7-8">7-8</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Name:</td>
+        <td><input type="text" name="fname" id="fname"size="25" placeholder ="first"></td>
+        <td><input type="text" name="lname" id="lname"size="25" placeholder ="last"></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email:</label></td>
+        <td colspan="2"><input type="email" name="email" id="email"size="57" placeholder ="john@company.com"></td>
+    </tr>
+    <tr>
+        <td><label for="arrivaldate">Arrival:</label></td>
+        <td><input type="date" id="arrivaldate" name="arrivaldate" ></td>
+        <td> <input type="time" id="arrivaltime" name="arrivaltime"></td>
+    </tr>
+    <tr>
+        <td><label for="departuredate">Departure:</label></td>
+        <td><input type="date" id="departuredate" name="departuredate"></td>
+        <td> <input type="time" id="departuretime" name="departuretime"></td>
+    </tr>
+    <tr>
+        <td>Free Pickup</td>
+        <td><input type="radio" id="Yes" name="pickup" value="Yes">
+        <label for="Yes">Yes,sure!</label><br>
+        <input type="radio" id="No" name="pickup" value="No">
+        <label for="No">No.I already rented a car</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="flightnum">Flight Number:</label></td>
+        <td colspan="2"><input type="text" name="flightnum" id="flightnum" size="57" placeholder ="C1209"></td>
+    </tr>
+    <tr>
+        <td>Other requests:</td>
+        <td colspan="2"><Textarea name="otherreq" id="otherreq" rows="5" cols="53"></Textarea></td>   
+   </tr>
+    <tr>
+        <td align="center"Colspan=4>
+        <input type="submit" value="Complete Reservation"></td>
+    </tr>
+    </table>
+ </form>
+ </body>
+</html>
