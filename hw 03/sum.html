@@ -4,3 +4,22 @@
 <input type="text" id="b" placeholder="num2"> 
 <button onclick="sum()">Summary</button>
 <div id="result"></div>
+<script>
+    function sum(){
+        num1 = document.getElementById("a").value;
+        num2 = document.getElementById("b").value;
+        num1 = parseInt(num1)
+        num2 = parseInt(num2)
+        document.getElementById("result").innerHTML = num1 ;
+        x = num1 ;
+        for (i = num1 + 1; i <= num2; i++) {
+            document.getElementById("result").innerHTML += "+" + i ;
+            x += i ;
+            if (i == num2){
+                document.getElementById("result").innerHTML += "=" + x;
+            }
+            
+        }
+        
+    }
+</script>
