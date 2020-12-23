@@ -1,3 +1,31 @@
 </br>
 </br>
 <input type="text" id="text" placeholder="สูตรคูณแม่ X" onkeyup="multi()"> 
+<table id="myTable">
+</table>
+<script>
+    function multi() {
+        text = document.getElementById("text").value;
+        document.getElementById("myTable").innerHTML = " ";
+        var x = document.createElement("TBODY");
+        for ( i=1;i<=12;i++){
+            var y = document.createElement("TR");
+                for ( j=1;j<=3;j++){
+                    var z = document.createElement("TD");
+                    if(j==1){
+                    z.innerHTML = text;
+                    y.appendChild(z);
+                    x.appendChild(y);}
+                    if(j==2){
+                    z.innerHTML = " x " + i;
+                    y.appendChild(z);
+                    x.appendChild(y);}
+                    if(j==3){
+                    z.innerHTML = " = " + text * i;
+                    y.appendChild(z);
+                    x.appendChild(y);}
+                }
+        }
+        document.getElementById("myTable").appendChild(x);
+    }
+</script>
