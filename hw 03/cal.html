@@ -10,4 +10,26 @@
 <input type="text" id="y" placeholder="num2"> 
 <button onclick="cal()">=</button>
 <div id="result"></div>
+<script>
+    function cal(){
+        num1 = document.getElementById("x").value;
+        num2 = document.getElementById("y").value;
+        num1 = parseInt(num1)
+        num2 = parseInt(num2)
+        Op = document.getElementById("Ope").value;
+        if (Op == "add"){
+            document.getElementById("result").innerHTML = (num1 + num2);
+        }
+        if (Op =="sub"){
+            document.getElementById("result").innerHTML = (num1 - num2);
+        }
+        if (Op =="mul"){
+            document.getElementById("result").innerHTML = (num1 * num2);
+        }
+        if (Op =="divi"){
+            document.getElementById("result").innerHTML = (num1 / num2);
+        }
+    }
+</script>
+
 
