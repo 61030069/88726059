@@ -202,30 +202,29 @@
     </a>
 </div>
 <center>
-<h1>Add new song</h1>
-<button><a href="searchsong.html">ค้นหาพลง</a></button></br>
+<h1>Add New Song
+[<a href="searchsong.html">ค้นหาพลง</a>]</h1>
 <input type="text" id="name" placeholder="ชื่อเพลง" size="50"></br>
 <input type="text" id="artist" placeholder="ศิลปิน" size="50"></br>
 <Textarea name="lyric" id="lyric" rows="10" cols="52" placeholder="เนื้อร้อง"></Textarea></br>
 <button onclick="save()">Save</button>
 <button onclick="clearf()">Clear form</button>
 <script>
-    arr2d = JSON.parse(localStorage.getItem("strs"));
+    arr2d = JSON.parse(localStorage.getItem("strs")); //กำหนด array 2มิติ
     function save(){
-        name = document.getElementById("name").value;
+        name = document.getElementById("name").value; //กำหนดค่า input
         artist = document.getElementById("artist").value;
         lyric = document.getElementById("lyric").value;
-        data = [name,artist,lyric];
-        arr2d.push(data);
-        str = JSON.stringify(arr2d);
-        alert(str);
-        localStorage.setItem("strs", str);
-        document.getElementById('name').value= null;
+        data = [name,artist,lyric]; //สร้างตัวแปรอะเรย์ data
+        arr2d.push(data); // เพิ่มอะเรย์ data เข้าไปในอะเรย์ arr2d
+        str = JSON.stringify(arr2d); // แปลง array เป็น JSON string
+        localStorage.setItem("strs", str); // save data ไว้ไน localStorage ด้วยเมธอด .setItem()
+        document.getElementById('name').value= null; //set ช่อง input ให้เป็นค่าเริ่มต้น 
         document.getElementById('artist').value= null;
         document.getElementById('lyric').value= null;
     }
     function clearf(){
-        document.getElementById('name').value= null;
+        document.getElementById('name').value= null; //set ช่อง input ให้เป็นค่าเริ่มต้น
         document.getElementById('artist').value= null;
         document.getElementById('lyric').value= null;
     }
